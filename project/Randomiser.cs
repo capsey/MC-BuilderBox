@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NonInvasiveKeyboardHookLibrary;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace MC_BuilderBox
 {
     public partial class Randomiser : Form
     {
+        KeyboardHookManager keyboardHookManager = new KeyboardHookManager();
+
         Random rand = new Random();
         string selected;
 
@@ -19,6 +22,17 @@ namespace MC_BuilderBox
         {
             InitializeComponent();
             mainBox.SelectedIndex = 0;
+
+            keyboardHookManager.Start();
+            keyboardHookManager.RegisterHotkey(0x31, NumKeysPressed);
+            keyboardHookManager.RegisterHotkey(0x32, NumKeysPressed);
+            keyboardHookManager.RegisterHotkey(0x33, NumKeysPressed);
+            keyboardHookManager.RegisterHotkey(0x34, NumKeysPressed);
+            keyboardHookManager.RegisterHotkey(0x35, NumKeysPressed);
+            keyboardHookManager.RegisterHotkey(0x36, NumKeysPressed);
+            keyboardHookManager.RegisterHotkey(0x37, NumKeysPressed);
+            keyboardHookManager.RegisterHotkey(0x38, NumKeysPressed);
+            keyboardHookManager.RegisterHotkey(0x39, NumKeysPressed);
         }
 
         private void interval_ValueChanged(object sender, EventArgs e)
@@ -78,7 +92,17 @@ namespace MC_BuilderBox
                 else keyToPress = selected[rand.Next(selected.Length)].ToString();
             }
 
+            keyboardHookManager.Stop();
             SendKeys.SendWait(keyToPress);
+            keyboardHookManager.Start();
+        }
+
+        private void NumKeysPressed()
+        {
+            if (!startButton.Checked) return;
+
+            Action action = () => startButton.Checked = false;
+            Invoke(action);
         }
     }
 }
