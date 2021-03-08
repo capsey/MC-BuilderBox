@@ -18,6 +18,7 @@ namespace MC_BuilderBox
         public Randomiser()
         {
             InitializeComponent();
+            mainBox.SelectedIndex = 0;
         }
 
         private void interval_ValueChanged(object sender, EventArgs e)
@@ -30,15 +31,15 @@ namespace MC_BuilderBox
             if(startButton.Checked)
             {
                 selected = "";
-                if (hotbar1.Checked) selected += hotbar1.Text;
-                if (hotbar2.Checked) selected += hotbar2.Text;
-                if (hotbar3.Checked) selected += hotbar3.Text;
-                if (hotbar4.Checked) selected += hotbar4.Text;
-                if (hotbar5.Checked) selected += hotbar5.Text;
-                if (hotbar6.Checked) selected += hotbar6.Text;
-                if (hotbar7.Checked) selected += hotbar7.Text;
-                if (hotbar8.Checked) selected += hotbar8.Text;
-                if (hotbar9.Checked) selected += hotbar9.Text;
+                if (hotbar1.Checked && mainBox.SelectedIndex != 1) selected += hotbar1.Text;
+                if (hotbar2.Checked && mainBox.SelectedIndex != 2) selected += hotbar2.Text;
+                if (hotbar3.Checked && mainBox.SelectedIndex != 3) selected += hotbar3.Text;
+                if (hotbar4.Checked && mainBox.SelectedIndex != 4) selected += hotbar4.Text;
+                if (hotbar5.Checked && mainBox.SelectedIndex != 5) selected += hotbar5.Text;
+                if (hotbar6.Checked && mainBox.SelectedIndex != 6) selected += hotbar6.Text;
+                if (hotbar7.Checked && mainBox.SelectedIndex != 7) selected += hotbar7.Text;
+                if (hotbar8.Checked && mainBox.SelectedIndex != 8) selected += hotbar8.Text;
+                if (hotbar9.Checked && mainBox.SelectedIndex != 9) selected += hotbar9.Text;
 
                 if (selected.Length < 2)
                 {
@@ -67,7 +68,16 @@ namespace MC_BuilderBox
             if (Form.ActiveForm == this)
                 return;
 
-            string keyToPress = selected[rand.Next(selected.Length)].ToString();
+            string keyToPress;
+
+            if (mainBox.SelectedIndex == 0)
+                keyToPress = selected[rand.Next(selected.Length)].ToString();
+            else
+            {
+                if (rand.Next(2) == 0) keyToPress = mainBox.SelectedIndex.ToString();
+                else keyToPress = selected[rand.Next(selected.Length)].ToString();
+            }
+
             SendKeys.SendWait(keyToPress);
         }
     }

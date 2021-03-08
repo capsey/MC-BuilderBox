@@ -43,6 +43,8 @@
             this.hotbar4 = new System.Windows.Forms.CheckBox();
             this.hotbar5 = new System.Windows.Forms.CheckBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.mainBox = new System.Windows.Forms.ComboBox();
+            this.main = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.interval)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -78,7 +80,7 @@
             0,
             0,
             0});
-            this.interval.Location = new System.Drawing.Point(16, 135);
+            this.interval.Location = new System.Drawing.Point(16, 132);
             this.interval.Maximum = new decimal(new int[] {
             5000,
             0,
@@ -240,18 +242,49 @@
             // 
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
-            // Form1
+            // mainBox
+            // 
+            this.mainBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.mainBox.FormattingEnabled = true;
+            this.mainBox.Items.AddRange(new object[] {
+            "None",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"});
+            this.mainBox.Location = new System.Drawing.Point(16, 188);
+            this.mainBox.Name = "mainBox";
+            this.mainBox.Size = new System.Drawing.Size(121, 24);
+            this.mainBox.TabIndex = 28;
+            // 
+            // main
+            // 
+            this.main.AutoSize = true;
+            this.main.Location = new System.Drawing.Point(13, 165);
+            this.main.Name = "main";
+            this.main.Size = new System.Drawing.Size(115, 17);
+            this.main.TabIndex = 29;
+            this.main.Text = "Main Hotbar Item";
+            // 
+            // Randomiser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(542, 253);
+            this.Controls.Add(this.main);
+            this.Controls.Add(this.mainBox);
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.intervalLabel);
             this.Controls.Add(this.interval);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "Randomiser";
             this.Text = "Hotbar randomiser";
             ((System.ComponentModel.ISupportInitialize)(this.interval)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -276,6 +309,8 @@
         private System.Windows.Forms.CheckBox hotbar4;
         private System.Windows.Forms.CheckBox hotbar5;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.ComboBox mainBox;
+        private System.Windows.Forms.Label main;
     }
 }
 
