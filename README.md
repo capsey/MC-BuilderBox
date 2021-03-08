@@ -18,8 +18,3 @@ To stop randomiser pressing hotbar keys you should press 'Stop' button or pressi
 ![изображение](https://user-images.githubusercontent.com/46106832/110325776-f5ccc780-8041-11eb-82b4-fced5d3f416c.png)
 3. Save it on your computer and double click on the saved file
 4. Use!
-
-## Planing features
-- [ ] Automatic randomiser disabling when any of 1-9 keys pressed
-- [ ] Randomising only on block placing option
-- [ ] Main block selecting (main block have higher chance to be selected)
