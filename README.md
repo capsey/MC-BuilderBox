@@ -4,11 +4,13 @@ Simple Windows Forms open-source program, that can help Minecraft Builders in bu
 [YouTube video demonstration](https://www.youtube.com/watch?v=6OmH4hCIxns)
 
 ## How to use
-You can select hotbar items, that would be randomised by clicking on coresponding buttons, change interval between peeking new item. To start randomiser click on 'Start' button and it will emulate random hotbar key pressed from selected in given intervals.
+You can select hotbar items, that would be randomised by clicking on coresponding buttons, the main hotbar item in dropdown menu, that will have greater chance to be picked, and change interval between picking new item.
 
-![изображение](https://user-images.githubusercontent.com/46106832/110322444-54437700-803d-11eb-8be5-882ccb27da60.png)
+To start randomiser click on 'Start' button and it will emulate random hotbar key pressed from selected in given intervals.
 
-To stop randomiser pressing hotbar keys you should press 'Stop' button.
+![изображение](https://user-images.githubusercontent.com/46106832/110351917-82d24980-805f-11eb-86eb-12dfac412ec9.png)
+
+To stop randomiser pressing hotbar keys you should press 'Stop' button or pressing 1-9 keys for emergency stopping.
 
 ## How to Install
 1. Click on lastest stable release on Release tab on right side 
