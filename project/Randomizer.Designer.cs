@@ -1,6 +1,6 @@
 ﻿namespace MC_BuilderBox
 {
-    partial class Randomiser
+    partial class Randomizer
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -271,7 +271,7 @@
             this.main.TabIndex = 29;
             this.main.Text = "Main Hotbar Item";
             // 
-            // Randomiser
+            // Randomizer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -284,8 +284,8 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "Randomiser";
-            this.Text = "Hotbar randomiser";
+            this.Name = "Randomizer";
+            this.Text = "Hotbar Randomizer";
             ((System.ComponentModel.ISupportInitialize)(this.interval)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);

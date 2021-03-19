@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace MC_BuilderBox
 {
-    public partial class Randomiser : Form
+    public partial class Randomizer : Form
     {
         KeyboardHookManager keyboardHookManager = new KeyboardHookManager();
 
         Random rand = new Random();
         string selected;
 
-        public Randomiser()
+        public Randomizer()
         {
             InitializeComponent();
             mainBox.SelectedIndex = 0;

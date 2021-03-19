@@ -16,7 +16,7 @@ namespace MC_BuilderBox
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Randomiser());
+            Application.Run(new Main());
         }
     }
 }
