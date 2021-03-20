@@ -35,5 +35,11 @@ namespace MC_BuilderBox
             ProcessStartInfo sInfo = new ProcessStartInfo("https://www.gnu.org/licenses/gpl-3.0.html");
             Process.Start(sInfo);
         }
+
+        private void creditLink1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ProcessStartInfo sInfo = new ProcessStartInfo("https://www.nuget.org/packages/NonInvasiveKeyboardHookLibrary/");
+            Process.Start(sInfo);
+        }
     }
 }

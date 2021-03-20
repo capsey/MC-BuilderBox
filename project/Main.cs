@@ -23,59 +23,35 @@ namespace MC_BuilderBox
 
         private void randomizer_Click(object sender, EventArgs e)
         {
-            if (randomizerForm != null)
-            {
-                randomizerForm.BringToFront();
-            }
-            else
-            {
-                randomizerForm = new Randomizer();
-                randomizerForm.Show();
+            randomizerForm = new Randomizer();
+            randomizerForm.Show(this);
 
-                this.Enabled = false;
-                randomizerForm.FormClosed += (s, args) => {
-                    this.Enabled = true;
-                    randomizerForm = null;
-                };
-            }
+            randomizer.Enabled = false;
+            randomizerForm.FormClosed += (s, args) => {
+                randomizer.Enabled = true;
+            };
         }
 
         private void bookWriter_Click(object sender, EventArgs e)
         {
-            if (bookWriterForm != null)
-            {
-                bookWriterForm.BringToFront();
-            }
-            else
-            {
-                bookWriterForm = new BookWriter();
-                bookWriterForm.Show();
+            bookWriterForm = new BookWriter();
+            bookWriterForm.Show(this);
 
-                this.Enabled = false;
-                bookWriterForm.FormClosed += (s, args) => {
-                    this.Enabled = true;
-                    bookWriterForm = null;
-                };
-            }
+            bookWriter.Enabled = false;
+            bookWriterForm.FormClosed += (s, args) => {
+                bookWriter.Enabled = true;
+            };
         }
 
         private void about_Click(object sender, EventArgs e)
         {
-            if (aboutForm != null)
-            {
-                aboutForm.BringToFront();
-            }
-            else
-            {
-                aboutForm = new About();
-                aboutForm.Show();
+            aboutForm = new About();
+            aboutForm.Show(this);
 
-                this.Enabled = false;
-                aboutForm.FormClosed += (s, args) => {
-                    this.Enabled = true;
-                    aboutForm = null;
-                };
-            }
+            about.Enabled = false;
+            aboutForm.FormClosed += (s, args) => {
+                about.Enabled = true;
+            };
         }
     }
 }

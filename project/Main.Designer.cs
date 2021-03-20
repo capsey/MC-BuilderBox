@@ -62,7 +62,7 @@
             this.randomizer.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.randomizer.Location = new System.Drawing.Point(12, 79);
             this.randomizer.Name = "randomizer";
-            this.randomizer.Size = new System.Drawing.Size(368, 45);
+            this.randomizer.Size = new System.Drawing.Size(352, 45);
             this.randomizer.TabIndex = 0;
             this.randomizer.Text = "Hotbar Randomizer";
             this.randomizer.UseVisualStyleBackColor = true;
@@ -75,7 +75,7 @@
             this.about.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.about.Location = new System.Drawing.Point(12, 181);
             this.about.Name = "about";
-            this.about.Size = new System.Drawing.Size(368, 45);
+            this.about.Size = new System.Drawing.Size(352, 45);
             this.about.TabIndex = 2;
             this.about.Text = "About";
             this.about.UseVisualStyleBackColor = true;
@@ -88,7 +88,7 @@
             this.bookWriter.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.bookWriter.Location = new System.Drawing.Point(12, 130);
             this.bookWriter.Name = "bookWriter";
-            this.bookWriter.Size = new System.Drawing.Size(368, 45);
+            this.bookWriter.Size = new System.Drawing.Size(352, 45);
             this.bookWriter.TabIndex = 3;
             this.bookWriter.Text = "Book Writer";
             this.bookWriter.UseVisualStyleBackColor = true;
@@ -98,15 +98,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(398, 244);
+            this.ClientSize = new System.Drawing.Size(382, 238);
             this.Controls.Add(this.bookWriter);
             this.Controls.Add(this.about);
             this.Controls.Add(this.randomizer);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.MinimumSize = new System.Drawing.Size(268, 291);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(800, 500);
+            this.MinimumSize = new System.Drawing.Size(270, 285);
             this.Name = "Main";
-            this.Text = "Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "MC BuilderBox";
             this.ResumeLayout(false);
             this.PerformLayout();
 
