@@ -24,7 +24,7 @@ namespace MC_BuilderBox
         private void randomizer_Click(object sender, EventArgs e)
         {
             randomizerForm = new Randomizer();
-            randomizerForm.Show(this);
+            randomizerForm.Show();
 
             randomizer.Enabled = false;
             randomizerForm.FormClosed += (s, args) => {
@@ -35,7 +35,7 @@ namespace MC_BuilderBox
         private void bookWriter_Click(object sender, EventArgs e)
         {
             bookWriterForm = new BookWriter();
-            bookWriterForm.Show(this);
+            bookWriterForm.Show();
 
             bookWriter.Enabled = false;
             bookWriterForm.FormClosed += (s, args) => {
@@ -46,7 +46,7 @@ namespace MC_BuilderBox
         private void about_Click(object sender, EventArgs e)
         {
             aboutForm = new About();
-            aboutForm.Show(this);
+            aboutForm.Show();
 
             about.Enabled = false;
             aboutForm.FormClosed += (s, args) => {

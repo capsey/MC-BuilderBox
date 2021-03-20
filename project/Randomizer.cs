@@ -23,7 +23,6 @@ namespace MC_BuilderBox
             InitializeComponent();
             mainBox.SelectedIndex = 0;
 
-            keyboardHookManager.Start();
             keyboardHookManager.RegisterHotkey(0x31, NumKeysPressed);
             keyboardHookManager.RegisterHotkey(0x32, NumKeysPressed);
             keyboardHookManager.RegisterHotkey(0x33, NumKeysPressed);
@@ -33,6 +32,7 @@ namespace MC_BuilderBox
             keyboardHookManager.RegisterHotkey(0x37, NumKeysPressed);
             keyboardHookManager.RegisterHotkey(0x38, NumKeysPressed);
             keyboardHookManager.RegisterHotkey(0x39, NumKeysPressed);
+            keyboardHookManager.Start();
         }
 
         private void interval_ValueChanged(object sender, EventArgs e)
@@ -58,13 +58,12 @@ namespace MC_BuilderBox
                 if (selected.Length < 2)
                 {
                     startButton.Checked = false;
-                    MessageBox.Show("You should choose at least 2 hotbar items to randomiser work properly.", "Error!");
+                    MessageBox.Show("You should choose at least 2 hotbar items to randomizer work.", "Error!");
                 }
             }
 
             startButton.Text = startButton.Checked ? "Stop" : "Start";
             timer.Enabled = startButton.Checked;
-            interval.Enabled = !startButton.Checked;
 
             hotbar1.Enabled = !startButton.Checked;
             hotbar2.Enabled = !startButton.Checked;
@@ -75,6 +74,11 @@ namespace MC_BuilderBox
             hotbar7.Enabled = !startButton.Checked;
             hotbar8.Enabled = !startButton.Checked;
             hotbar9.Enabled = !startButton.Checked;
+
+            interval.Enabled = !startButton.Checked;
+            mainBox.Enabled = !startButton.Checked;
+
+            checkKeyPressing.Enabled = !startButton.Checked;
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -99,6 +103,7 @@ namespace MC_BuilderBox
 
         private void NumKeysPressed()
         {
+            if (!checkKeyPressing.Checked) return;
             if (!startButton.Checked) return;
 
             Action action = () => startButton.Checked = false;

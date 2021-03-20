@@ -73,22 +73,9 @@ namespace MC_BuilderBox
                 return;
             }
 
-            if (resultForm != null)
-            {
-                resultForm.BringToFront();
-            }
-            else
-            {
-                resultForm = new BookWriterResult(pages.ToArray());
-                resultForm.Show();
 
-                this.Enabled = false;
-
-                resultForm.FormClosed += (s, args) => {
-                    this.Enabled = true;
-                    resultForm = null;
-                };
-            }
+            resultForm = new BookWriterResult(pages.ToArray());
+            resultForm.ShowDialog(this);
         }
 
         private int getCharacterWidth(char c)

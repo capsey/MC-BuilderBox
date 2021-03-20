@@ -45,6 +45,7 @@
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.mainBox = new System.Windows.Forms.ComboBox();
             this.main = new System.Windows.Forms.Label();
+            this.checkKeyPressing = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.interval)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -54,7 +55,7 @@
             this.startButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.startButton.Appearance = System.Windows.Forms.Appearance.Button;
             this.startButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.startButton.Location = new System.Drawing.Point(410, 181);
+            this.startButton.Location = new System.Drawing.Point(410, 231);
             this.startButton.Name = "startButton";
             this.startButton.Size = new System.Drawing.Size(120, 60);
             this.startButton.TabIndex = 27;
@@ -271,11 +272,23 @@
             this.main.TabIndex = 29;
             this.main.Text = "Main Hotbar Item";
             // 
+            // checkKeyPressing
+            // 
+            this.checkKeyPressing.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.checkKeyPressing.AutoSize = true;
+            this.checkKeyPressing.Location = new System.Drawing.Point(12, 270);
+            this.checkKeyPressing.Name = "checkKeyPressing";
+            this.checkKeyPressing.Size = new System.Drawing.Size(205, 21);
+            this.checkKeyPressing.TabIndex = 30;
+            this.checkKeyPressing.Text = "Disabling when 1-9 pressed";
+            this.checkKeyPressing.UseVisualStyleBackColor = true;
+            // 
             // Randomizer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(542, 253);
+            this.ClientSize = new System.Drawing.Size(542, 303);
+            this.Controls.Add(this.checkKeyPressing);
             this.Controls.Add(this.main);
             this.Controls.Add(this.mainBox);
             this.Controls.Add(this.startButton);
@@ -311,6 +324,7 @@
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.ComboBox mainBox;
         private System.Windows.Forms.Label main;
+        private System.Windows.Forms.CheckBox checkKeyPressing;
     }
 }
 
