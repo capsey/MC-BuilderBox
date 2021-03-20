@@ -31,7 +31,6 @@ Currently Book Writer support these characters: A-Z, basic punctuation symbols, 
 ## How to Install
 1. Click on lastest stable release on Release tab on right side 
 2. Click on MC_BuildBox.exe on Assets tab on release page to download executable file
-
 ![изображение](https://user-images.githubusercontent.com/46106832/110325776-f5ccc780-8041-11eb-82b4-fced5d3f416c.png)
 3. Save it on your computer and double click on the saved file
 4. Use!
