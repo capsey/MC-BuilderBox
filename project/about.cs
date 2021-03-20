@@ -41,5 +41,11 @@ namespace MC_BuilderBox
             ProcessStartInfo sInfo = new ProcessStartInfo("https://www.nuget.org/packages/NonInvasiveKeyboardHookLibrary/");
             Process.Start(sInfo);
         }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ProcessStartInfo sInfo = new ProcessStartInfo("https://www.nuget.org/packages/Costura.Fody/");
+            Process.Start(sInfo);
+        }
     }
 }

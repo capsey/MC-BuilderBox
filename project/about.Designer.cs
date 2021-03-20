@@ -36,8 +36,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.creditLink1 = new System.Windows.Forms.LinkLabel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -121,6 +122,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.linkLabel2);
             this.groupBox1.Controls.Add(this.creditLink1);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label2);
@@ -132,10 +134,22 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.Location = new System.Drawing.Point(12, 45);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(279, 120);
+            this.groupBox1.Size = new System.Drawing.Size(358, 146);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Links";
+            // 
+            // creditLink1
+            // 
+            this.creditLink1.AutoSize = true;
+            this.creditLink1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.creditLink1.Location = new System.Drawing.Point(120, 89);
+            this.creditLink1.Name = "creditLink1";
+            this.creditLink1.Size = new System.Drawing.Size(223, 17);
+            this.creditLink1.TabIndex = 7;
+            this.creditLink1.TabStop = true;
+            this.creditLink1.Text = "NonInvasiveKeyboardHookLibrary";
+            this.creditLink1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.creditLink1_LinkClicked);
             // 
             // label5
             // 
@@ -147,23 +161,23 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Credits:";
             // 
-            // creditLink1
+            // linkLabel2
             // 
-            this.creditLink1.AutoSize = true;
-            this.creditLink1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.creditLink1.Location = new System.Drawing.Point(120, 89);
-            this.creditLink1.Name = "creditLink1";
-            this.creditLink1.Size = new System.Drawing.Size(99, 17);
-            this.creditLink1.TabIndex = 7;
-            this.creditLink1.TabStop = true;
-            this.creditLink1.Text = "Kfir Eichenblat";
-            this.creditLink1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.creditLink1_LinkClicked);
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.linkLabel2.Location = new System.Drawing.Point(120, 113);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(92, 17);
+            this.linkLabel2.TabIndex = 8;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Costura.Fody";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(303, 177);
+            this.ClientSize = new System.Drawing.Size(382, 203);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -189,5 +203,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.LinkLabel creditLink1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }
